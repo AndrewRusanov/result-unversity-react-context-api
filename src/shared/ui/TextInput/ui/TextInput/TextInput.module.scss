@@ -4,13 +4,13 @@
   gap: 4px;
 
   .label {
-    color: var(--text-color);
+    color: var(--text-primary);
     display: flex;
     align-items: center;
     gap: 4px;
 
     .requiredStar {
-      color: var(--error-color);
+      color: var(--text-accent);
     }
 
     &--xs {
@@ -31,7 +31,7 @@
   }
 
   .description {
-    color: var(--placeholder-color);
+    color: var(--text-secondary);
 
     &--xs {
       font: var(--font-xs);
@@ -64,7 +64,7 @@
 
       svg {
         path {
-          fill: var(--placeholder-color);
+          fill: var(--text-secondary);
         }
       }
 
@@ -113,24 +113,24 @@
     .input {
       outline: none;
       font-weight: 400;
-      color: var(--text-color);
+      color: var(--text-primary);
 
       &:focus {
-        border-color: var(--border-active-color);
+        border-color: var(--secondary);
       }
 
       &::placeholder {
-        color: var(--placeholder-color);
+        color: var(--text-secondary);
       }
 
       &--variant-filled {
-        background-color: var(--border-color);
-        border: 1px solid var(--border-color);
+        background-color: var(--secondary);
+        border: 1px solid var(--secondary);
       }
 
       &--variant-default {
         background-color: transparent;
-        border: 1px solid var(--border-color);
+        border: 1px solid var(--secondary);
       }
 
       &--variant-unstyled {
