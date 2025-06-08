@@ -1,0 +1,68 @@
+:root {
+  --font-family-main: Arial, sans-serif;
+
+  --font-size-xs: 10px;
+  --font-line-xs: 1.08;
+  --font-xs: var(--font-size-xs) / var(--font-line-xs) var(--font-family-main);
+
+  --font-size-s: 12px;
+  --font-line-s: 1.17;
+  --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
+
+  --font-size-m: 16px;
+  --font-line-m: 1.21;
+  --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+
+  --font-size-l: 24px;
+  --font-line-l: 1.4;
+  --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+
+  --font-size-xl: 32px;
+  --font-line-xl: 1.4;
+  --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+
+  --transition-slow: 1s;
+  --transition-medium: 0.5s;
+  --transition-fast: 0.25s;
+
+  /* Вторичные цвета */
+  --primary: #42b4ca; // Голубой Рика (основной акцент)
+  --primary-dark: #3697ad; // Темный вариант голубого
+  --primary-light: #a7e0eb; // Светлый вариант голубого
+
+  /* Вторичные цвета */
+  --secondary: #b0d837; // Зеленый Морти (второй акцент)
+  --secondary-dark: #8fb02d;
+  --secondary-light: #d8f0a0;
+
+  /* Фоновые цвета */
+  --bg-primary: #f5f5f5; // Основной фон
+  --bg-secondary: #ffffff; // Вторичный фон (карточки)
+  --bg-dark: #1a1a1a; // Темный фон (для футера или особых секций)
+
+  /* Текстовые цвета */
+  --text-primary: #333333; // Основной текст
+  --text-secondary: #666666; // Вторичный текст
+  --text-light: #ffffff; // Текст на темном фоне
+  --text-accent: #e74c3c; // Акцентный текст (ошибки, важные элементы)
+
+  /* Дополнительные психоделические цвета */
+  --psychedelic-purple: #9b59b6; // Пурпурный (для особых акцентов)
+  --psychedelic-pink: #e84393; // Розовый
+  --psychedelic-orange: #e67e22; // Оранжевый
+
+  /* Статусные цвета */
+  --status-alive: #55cc44; // Живой
+  --status-dead: #d63d2e; // Мертвый
+  --status-unknown: #9e9e9e; // Неизвестно
+
+  /* Границы и тени */
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-hover: rgba(0, 0, 0, 0.15);
+
+  /* Разное */
+  --error-color: #e74c3c; // Цвет ошибок
+  --success-color: #2ecc71; // Цвет успеха
+  --warning-color: #f39c12; // Цвет предупреждения
+}
