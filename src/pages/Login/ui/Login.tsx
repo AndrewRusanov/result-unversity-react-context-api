@@ -2,15 +2,21 @@ import { SignIn } from '@/features/SignIn'
 import { SignInFormData } from '@/features/SignIn/ui/SignIn'
 import { SignUp } from '@/features/SignUp'
 import { FormData } from '@/features/SignUp/ui/SignUp'
+import { useAuth } from '@app/providers/AuthProvider'
 import { FC, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from './Login.module.scss'
 
 const Login: FC = () => {
   const [mode, setMode] = useState<'signIn' | 'signUp'>('signIn')
+  const auth = useAuth()
+  const navigate = useNavigate()
 
   const handleSignUpSubmit = (formData: FormData) => {
-    localStorage.setItem(formData.email, JSON.stringify(formData))
-    alert('Регистрация прошла успешно!')
+    auth?.signUp(formData, () => {
+      setMode('signIn')
+      alert('Регистрация прошла успешно!')
+    })
   }
 
   const handleSignInSubmit = (formData: SignInFormData) => {
@@ -26,7 +32,11 @@ const Login: FC = () => {
       alert('Неверный пароль!')
       return
     }
-    alert(`Добро пожаловать, ${user.name}!`)
+
+    auth?.signIn(user, () => {
+      navigate('/')
+      alert(`Добро пожаловать, ${user.name}!`)
+    })
   }
 
   const handleToggleMode = () => {

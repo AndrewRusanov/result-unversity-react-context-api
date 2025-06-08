@@ -1,3 +1,4 @@
+import { FormData } from '@/features/SignUp/ui/SignUp'
 import { SignInFormData } from '@features/SignIn/ui/SignIn'
 import { createContext } from 'react'
 
