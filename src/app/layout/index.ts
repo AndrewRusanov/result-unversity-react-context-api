@@ -1,3 +1,3 @@
-import MainLayout from './ui/MainLayout'
+import { MainLayout } from './MainLayout'
 
 export { MainLayout }
