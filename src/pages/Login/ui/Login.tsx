@@ -4,13 +4,16 @@ import { SignUp } from '@/features/SignUp'
 import { FormData } from '@/features/SignUp/ui/SignUp'
 import { useAuth } from '@app/providers/AuthProvider'
 import { FC, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import styles from './Login.module.scss'
 
 const Login: FC = () => {
   const [mode, setMode] = useState<'signIn' | 'signUp'>('signIn')
   const auth = useAuth()
   const navigate = useNavigate()
+  const location = useLocation()
+
+  const from = location.state?.from || '/'
 
   const handleSignUpSubmit = (formData: FormData) => {
     auth?.signUp(formData, () => {
@@ -34,7 +37,7 @@ const Login: FC = () => {
     }
 
     auth?.signIn(user, () => {
-      navigate('/')
+      navigate(from)
       alert(`Добро пожаловать, ${user.name}!`)
     })
   }
