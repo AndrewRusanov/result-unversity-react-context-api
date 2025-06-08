@@ -5,6 +5,7 @@ import { Login } from '@pages/Login'
 import { NotFound } from '@pages/NotFound'
 import { Route, Routes } from 'react-router-dom'
 import { MainLayout } from './layout'
+import { PrivateRoute } from './providers'
 
 function App() {
   return (
@@ -13,27 +14,61 @@ function App() {
         <Route path='/login' element={<Login />} />
 
         <Route element={<MainLayout />}>
-          <Route path='/' element={<Home />} />
+          <Route
+            path='/'
+            element={
+              <PrivateRoute>
+                <Home />
+              </PrivateRoute>
+            }
+          />
           <Route
             path='/characters'
-            element={<Category category='characters' />}
+            element={
+              <PrivateRoute>
+                <Category category='characters' />
+              </PrivateRoute>
+            }
           />
           <Route
             path='/characters/:id'
-            element={<Details category='characters' />}
+            element={
+              <PrivateRoute>
+                <Details category='characters' />
+              </PrivateRoute>
+            }
           />
-          <Route path='/episodes' element={<Category category='episodes' />} />
+          <Route
+            path='/episodes'
+            element={
+              <PrivateRoute>
+                <Category category='episodes' />
+              </PrivateRoute>
+            }
+          />
           <Route
             path='/episodes/:id'
-            element={<Details category='episodes' />}
+            element={
+              <PrivateRoute>
+                <Details category='episodes' />
+              </PrivateRoute>
+            }
           />
           <Route
             path='/locations'
-            element={<Category category='locations' />}
+            element={
+              <PrivateRoute>
+                <Category category='locations' />
+              </PrivateRoute>
+            }
           />
           <Route
             path='/locations/:id'
-            element={<Details category='locations' />}
+            element={
+              <PrivateRoute>
+                <Category category='locations' />
+              </PrivateRoute>
+            }
           />
           <Route path='*' element={<NotFound />} />
         </Route>
