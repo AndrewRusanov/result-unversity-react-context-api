@@ -12,7 +12,6 @@ function App() {
       <Navbar />
       <main>
         <Routes>
-          {/* TODO: добавить роуты */}
           <Route path='/login' element={<Login />} />
           <Route path='/' element={<Home />} />
           <Route
