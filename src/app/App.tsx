@@ -1,18 +1,18 @@
-import { Navbar } from '@/widgets'
 import { Category } from '@pages/Category'
 import { Details } from '@pages/Details'
 import { Home } from '@pages/Home'
 import { Login } from '@pages/Login'
 import { NotFound } from '@pages/NotFound'
 import { Route, Routes } from 'react-router-dom'
+import { MainLayout } from './layout'
 
 function App() {
   return (
     <div className='app'>
-      <Navbar />
-      <main>
-        <Routes>
-          <Route path='/login' element={<Login />} />
+      <Routes>
+        <Route path='/login' element={<Login />} />
+
+        <Route element={<MainLayout />}>
           <Route path='/' element={<Home />} />
           <Route
             path='/characters'
@@ -36,8 +36,8 @@ function App() {
             element={<Details category='locations' />}
           />
           <Route path='*' element={<NotFound />} />
-        </Routes>
-      </main>
+        </Route>
+      </Routes>
     </div>
   )
 }
