@@ -22,7 +22,6 @@ export const AuthProvider: FC<Props> = ({ children }) => {
 
   const signOut = (callback: () => void) => {
     setUser(null)
-    if (user?.email) localStorage.removeItem(user.email)
     callback()
   }
 
