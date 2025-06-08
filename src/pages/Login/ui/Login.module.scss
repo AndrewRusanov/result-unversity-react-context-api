@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 48px 0 0;
+  flex-direction: column;
+
+  .subtitle {
+    text-align: center;
+    margin: 16px 0 0;
+    font: var(--font-m);
+    color: var(--text-primary);
+  }
+
+  .actionBtn {
+    background: none;
+    outline: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+    width: fit-content;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

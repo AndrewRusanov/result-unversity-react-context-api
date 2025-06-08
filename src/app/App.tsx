@@ -1,7 +1,8 @@
-import { Category } from '@/pages/Category'
-import { Details } from '@/pages/Details'
 import { Navbar } from '@/widgets'
+import { Category } from '@pages/Category'
+import { Details } from '@pages/Details'
 import { Home } from '@pages/Home'
+import { Login } from '@pages/Login'
 import { NotFound } from '@pages/NotFound'
 import { Route, Routes } from 'react-router-dom'
 
@@ -12,6 +13,7 @@ function App() {
       <main>
         <Routes>
           {/* TODO: добавить роуты */}
+          <Route path='/login' element={<Login />} />
           <Route path='/' element={<Home />} />
           <Route
             path='/characters'
