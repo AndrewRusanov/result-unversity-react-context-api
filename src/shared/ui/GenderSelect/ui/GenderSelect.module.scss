@@ -1,0 +1,130 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .label {
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    .requiredStar {
+      color: var(--text-accent);
+    }
+
+    &--xs {
+      font: var(--font-xs);
+    }
+    &--sm {
+      font: var(--font-s);
+    }
+    &--md {
+      font: var(--font-m);
+    }
+    &--lg {
+      font: var(--font-l);
+    }
+    &--xl {
+      font: var(--font-xl);
+    }
+  }
+
+  .description {
+    color: var(--text-secondary);
+
+    &--xs {
+      font: var(--font-xs);
+    }
+    &--sm {
+      font: var(--font-xs);
+    }
+    &--md {
+      font: var(--font-s);
+    }
+    &--lg {
+      font: var(--font-m);
+    }
+    &--xl {
+      font: var(--font-l);
+    }
+  }
+
+  .options {
+    display: flex;
+    gap: 16px;
+    margin-top: 4px;
+
+    .option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: var(--secondary);
+      }
+
+      .radioInput {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .radioControl {
+        width: 16px;
+        height: 16px;
+        border: 2px solid var(--secondary);
+        border-radius: 50%;
+        position: relative;
+        transition: all 0.2s ease;
+
+        &Checked {
+          border-color: var(--primary);
+          background-color: var(--primary);
+
+          &::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+
+      .optionLabel {
+        font: var(--font-m);
+      }
+    }
+  }
+}
+
+.error {
+  color: var(--error-color);
+  margin-top: 4px;
+
+  &--xs {
+    font: var(--font-xs);
+  }
+  &--sm {
+    font: var(--font-xs);
+  }
+  &--md {
+    font: var(--font-s);
+  }
+  &--lg {
+    font: var(--font-m);
+  }
+  &--xl {
+    font: var(--font-l);
+  }
+}

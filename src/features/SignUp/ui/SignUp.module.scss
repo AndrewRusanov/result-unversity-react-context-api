@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+
+  .title {
+    font: var(--font-l);
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .submit_btn {
+    background: var(--secondary);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font: var(--font-m);
+    padding: 8px 0;
+
+    &:hover {
+      cursor: pointer;
+      background: var(--secondary-dark);
+    }
+  }
+}
